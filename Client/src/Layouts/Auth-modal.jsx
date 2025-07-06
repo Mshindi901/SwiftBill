@@ -2,6 +2,7 @@ import { X } from "lucide-react";
 import { useState } from "react";
 import {supabase} from '../assets/supabase.js'
 import {useNavigate} from 'react-router-dom';
+import {toast, ToastContainer, Bounce} from 'react-toastify'
 
 export default function AuthModal({onClose}){
     const [showSignUp, setShowSignUp] = useState(false);
@@ -15,6 +16,20 @@ export default function AuthModal({onClose}){
 
     const handleShowingSignUp = () => {
         setShowSignUp(prev => !prev);
+    }
+
+    const notify = () => {
+        toast.info('Email Verification sent', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+        });
     }
 
     const handleCreateAccountSubmit = async (e) => {
@@ -31,7 +46,7 @@ export default function AuthModal({onClose}){
                 name: newName,
                 email: newEmail,
             });
-            setShowSignUp(prev => !prev);
+            notify();
             return;
         }
     }
@@ -106,6 +121,7 @@ export default function AuthModal({onClose}){
                         <button className="w-full py-3 rounded-3xl bg-slate-400 text-white" onClick={handleShowingSignUp}>Login</button>
                     </div>
                 }
+                <ToastContainer/>
             </div>
         </>
     )
