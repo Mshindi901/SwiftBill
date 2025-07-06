@@ -59,7 +59,7 @@ Client/
 1. **Clone the repo**
 
 ```bash
-git clone https://github.com/your-username/swiftbill.git
+git clone https://github.com/Mshindi901/swiftbill.git
 cd swiftbill/Client
 
 
