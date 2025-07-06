@@ -1,4 +1,6 @@
+{/*Icons from Lucide */}
 import { LayoutGrid, Power } from 'lucide-react';
+{/*The Sheet Component from shadcn/ui*/}
 import {
   Sheet,
   SheetContent,
@@ -6,8 +8,9 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/components/ui/sheet.jsx";
 import { useState, useEffect } from 'react';
+{/*The Supabase config file*/}
 import { supabase } from '../assets/supabase.js';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -21,6 +24,7 @@ export default function Dashboard() {
     const [userApps, setUserApps] = useState([]);
     const navigate = useNavigate();
 
+    //Function to Add/insert the App info to the db
     const handleAppAddition = async (e) => {
       e.preventDefault();
 

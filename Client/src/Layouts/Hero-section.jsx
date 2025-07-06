@@ -115,7 +115,7 @@ export default function HeroSection() {
                         <button className="px-6 py-3 rounded-xl bg-violet-700 text-white font-semibold shadow hover:bg-violet-800 transition-all duration-300" onClick={handleShowAuthModal}>
                             Start Free Trial
                         </button>
-                        <button className="px-6 py-3 rounded-xl bg-slate-800 text-white font-semibold shadow hover:bg-slate-900 transition-all duration-300">
+                        <button className="px-6 py-3 rounded-xl bg-slate-800 text-white font-semibold shadow hover:bg-slate-900 transition-all duration-300" onClick={handleShowPremiumModal}>
                             Explore Premium
                         </button>
                     </div>
