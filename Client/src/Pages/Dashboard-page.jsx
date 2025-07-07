@@ -104,10 +104,13 @@ export default function Dashboard() {
         <Link to='/'><h1 className="md:text-4xl text-2xl font-bold text-slate-700">SwiftBill</h1></Link>
         
 
-        <div className="w-fit md:w-1/3 flex flex-col sm:flex-row gap-3">
-          <button className="hidden w-full py-3 px-4 rounded-xl bg-violet-800 md:flex items-center justify-center gap-2 text-white font-semibold hover:bg-violet-900 transition">
-            👑 Subscription
-          </button>
+        <div className="w-fit md:w-1/5 flex flex-col sm:flex-row gap-3">
+        {
+          /* For when we launch with the Premium Package
+              <button className="hidden w-full py-3 px-4 rounded-xl bg-violet-800 md:flex items-center justify-center gap-2 text-white font-semibold hover:bg-violet-900 transition">👑 Subscription</button>
+          */
+        }
+          
 
           <button className="w-full py-3 px-4 rounded-xl bg-red-600 flex items-center justify-center gap-2 text-white font-semibold hover:bg-red-700 transition" onClick={handleLogout}>
             Logout <Power size={18} />
