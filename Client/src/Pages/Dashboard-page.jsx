@@ -105,14 +105,13 @@ export default function Dashboard() {
         
 
         <div className="w-fit md:w-1/5 flex flex-col sm:flex-row gap-3">
-        {
-          /* For when we launch with the Premium Package
-              <button className="hidden w-full py-3 px-4 rounded-xl bg-violet-800 md:flex items-center justify-center gap-2 text-white font-semibold hover:bg-violet-900 transition">👑 Subscription</button>
-          */
-        }
-          
-
-          <button className="w-full py-3 px-4 rounded-xl bg-red-600 flex items-center justify-center gap-2 text-white font-semibold hover:bg-red-700 transition" onClick={handleLogout}>
+          {
+            /* For when we launch with the Premium Package
+                <button className="hidden w-full py-3 px-4 rounded-xl bg-violet-800 md:flex items-center justify-center gap-2 text-white font-semibold hover:bg-violet-900 transition">👑 Subscription</button>
+            */
+          }
+          {/*I changed the width of the button in medium screens and above but when launching Premium Please be sure to change that*/}
+          <button className="w-full md:w-2/3 py-3 px-4 rounded-xl bg-red-600 flex items-center justify-center gap-2 text-white font-semibold hover:bg-red-700 transition" onClick={handleLogout}>
             Logout <Power size={18} />
           </button>
         </div>
